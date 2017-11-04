@@ -8,7 +8,6 @@ public class BattlePresenter{
         List<String> adjectives = new ArrayList<>(Arrays.asList(
                 "super duper", "bombastic", "powerful", "glorious", "Love of crowd", "megacool", "first boy at the village"
         ));
-        int firstAjectiveIndex, secondAdjectiveIndex;
 
         System.out.println("Today gonna be a great battle!");
         Thread.sleep(1000);
@@ -17,6 +16,18 @@ public class BattlePresenter{
 
         System.out.println("Welcome the first opponent!");
         Thread.sleep(1000);
+        presentCharacter(c1, adjectives);
+
+        System.out.println("And welcome the second one!");
+        Thread.sleep(1000);
+        presentCharacter(c2, adjectives);
+
+        System.out.println("Let the battle begin!!!");
+        Thread.sleep(1000);
+    }
+
+    private void presentCharacter(Character c, List<String> adjectives) throws Exception{
+        int firstAjectiveIndex, secondAdjectiveIndex;
         firstAjectiveIndex = ThreadLocalRandom.current().nextInt(0, adjectives.size());
         do {
             secondAdjectiveIndex = ThreadLocalRandom.current().nextInt(0, adjectives.size());
@@ -25,21 +36,7 @@ public class BattlePresenter{
         Thread.sleep(1000);
         System.out.println(adjectives.get(secondAdjectiveIndex));
         Thread.sleep(1000);
-        System.out.println(c1.getClass().getCanonicalName() + " " + c1.getName() + "!");
-        Thread.sleep(1000);
-
-        System.out.println("And welcome the second one!");
-        Thread.sleep(1000);
-        firstAjectiveIndex = ThreadLocalRandom.current().nextInt(0, adjectives.size());
-        secondAdjectiveIndex = ThreadLocalRandom.current().nextInt(0, adjectives.size());
-        System.out.println(adjectives.get(firstAjectiveIndex));
-        Thread.sleep(1000);
-        System.out.println(adjectives.get(secondAdjectiveIndex));
-        Thread.sleep(1000);
-        System.out.println(c2.getClass().getCanonicalName() + " " + c2.getName() + "!");
-        Thread.sleep(1000);
-
-        System.out.println("Let the battle begin!!!");
+        System.out.println(c.getClass().getCanonicalName() + " " + c.getName() + "!");
         Thread.sleep(1000);
     }
 }
