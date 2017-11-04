@@ -21,6 +21,10 @@ public abstract class Character {
         return this.power;
     }
 
+    public void decreasePower(int power){
+        this.power -= power;
+    }
+
     public int getHp(){
         return this.hp;
     }

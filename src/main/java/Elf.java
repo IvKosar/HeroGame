@@ -7,11 +7,18 @@ public class Elf extends Character {
     }
 
     public void kick(Character character){
-        int opponenHp = character.getHp();
+        int opponentHp = character.getHp();
         int opponentPower = character.getPower();
-        int kickPower = (this.power > opponentPower) ? opponenHp : 1;
-        System.out.println("Elf " + this.name + " damaged " + character.getClass().getCanonicalName()
-                + " " + character.getName() + " by " + Integer.toString(kickPower) + " hp");
-        character.decreaseHp(kickPower);
+        if (this.power > opponentPower){
+            System.out.println("Elf " + this.name + " killed " + character.getClass().getCanonicalName()
+                    + " " + character.getName());
+            character.decreaseHp(opponentHp);
+        }
+        else{
+            character.decreasePower(1);
+            System.out.println("Elf " + this.name + " decresed power of " + character.getClass().getCanonicalName()
+                    + " " + character.getName() + " by 1");
+        }
+
         }
 }

@@ -29,6 +29,11 @@ public class GameManager {
             System.out.println("Finally, hobbits runed out of tears");
             return;
         }
+        else if (c1 instanceof Elf && c2 instanceof Elf){
+            System.out.println("Elfs are fighting forever");
+            Thread.sleep(1000);
+            return;
+        }
         while (firstOpponent.isAlive && secondOpponent.isAlive){
             firstOpponent.kick(secondOpponent);
             System.out.println();

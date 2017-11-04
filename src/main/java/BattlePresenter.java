@@ -23,6 +23,7 @@ public class BattlePresenter{
         presentCharacter(c2, adjectives);
 
         System.out.println("Let the battle begin!!!");
+        System.out.println();
         Thread.sleep(1000);
     }
 

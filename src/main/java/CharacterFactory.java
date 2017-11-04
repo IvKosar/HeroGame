@@ -6,7 +6,7 @@ public class CharacterFactory {
             Hobbit.class, Elf.class, King.class, Knight.class)
             );
     private static List<String> names = new ArrayList<>(Arrays.asList(
-            "Funny man", "Charlie Scene", "J-Dog", "Johny 3 Tears", "Danny")
+            "Funny Man", "Charlie Scene", "J-Dog", "Johny 3 Tears", "Danny")
             );
 
     public Character createCharacter() throws Exception{
