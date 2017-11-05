@@ -29,6 +29,10 @@ public class BattlePresenter{
 
     private void presentCharacter(Character c, List<String> adjectives) throws Exception{
         int firstAjectiveIndex, secondAdjectiveIndex;
+        System.out.println("Who can live for " + c.getHp() + " years");
+        Thread.sleep(1000);
+        System.out.println("And is as strong as " + c.getPower() + " horses");
+        Thread.sleep(1000);
         firstAjectiveIndex = ThreadLocalRandom.current().nextInt(0, adjectives.size());
         do {
             secondAdjectiveIndex = ThreadLocalRandom.current().nextInt(0, adjectives.size());

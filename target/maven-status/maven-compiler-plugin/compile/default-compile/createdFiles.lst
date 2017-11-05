@@ -1,6 +1,7 @@
 CharacterFactory.class
 Elf.class
 Character.class
+ArmouredMan.class
 King.class
 Hobbit.class
 Knight.class
